@@ -1,0 +1,17 @@
+#!/bin/bash
+# Get today's date in yyyy-mm-dd format
+today_date=$(date +%Y-%m-%d)
+file_name="${today_date}-file.txt"
+echo "one"
+echo "two"
+echo "three"
+echo "four"
+echo "five"
+{
+  echo "one"
+  echo "two"
+  echo "three"
+  echo "four"
+  echo "five"
+} > "$file_name"
+echo "File '$file_name' has been created."
