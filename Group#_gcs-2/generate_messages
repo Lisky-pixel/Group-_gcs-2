@@ -1,0 +1,6 @@
+#!/bin/bash
+while IFS= read -r name
+ do
+  sed "s/Recipient_Name/$name/g" template.txt > "${name}.txt"
+done < names.txt
+echo "Personalized messages generated for group members."
