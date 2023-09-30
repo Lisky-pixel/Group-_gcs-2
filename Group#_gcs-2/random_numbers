@@ -1,0 +1,16 @@
+#!/bin/bash
+# Function to generate a random number
+generate_random_number() {
+  echo $((RANDOM % 100000))
+}
+random_number1=$(generate_random_number)
+echo "The first random number generated is $random_number1"
+square_root1=$(echo "scale=0; sqrt($random_number1)" | bc)
+echo "The square root is $square_root1"
+random_number2=$(generate_random_number)
+echo "The second random number generated is $random_number2"
+square_root2=$(echo "scale=0; sqrt($random_number2)" | bc)
+echo "The square root is $square_root2"
+sum_of_square_roots=$((square_root1 + square_root2))
+echo "The sum of their square roots is $sum_of_square_roots"
+
